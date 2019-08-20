@@ -1,0 +1,26 @@
+
+
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+      <title></title>
+    </head>
+    <body>
+    <%@tasks .each do |task | %>
+    <h1><%=task.title%></h1>
+    <br>
+    <ul>
+     <li><%=task.details%></li>
+      <li><%=task.completed?%></li>
+      <li><%= link_to task.title, task%></li>
+      <%= link_to 'Add a task', tasks_new_path %>
+    <%end %>
+    </ul>
+    </body>
+    </html>
+
+
+
+
+
